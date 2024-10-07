@@ -20,7 +20,7 @@
 -->
 
     <include name="Font_Default">
-        <param name="font_black">RobotoCondensed-Black.ttf</param>
+        <param name="font_black">RobotoCondensed-ExtraBold.ttf</param>
         <param name="font_bold">RobotoCondensed-Bold.ttf</param>
         <param name="font_regular">RobotoCondensed-Regular.ttf</param>
         <param name="font_light">RobotoCondensed-Light.ttf</param>
@@ -32,7 +32,7 @@
             <font>
                 <name>font_title_huge</name>
                 <filename>$PARAM[font_black]</filename>
-                <size>98</size>
+                <size>97</size>
                 <aspect>$PARAM[aspect_standard]</aspect>
             </font>
             <font>
@@ -44,7 +44,7 @@
             <font>
                 <name>font_title_main</name>
                 <filename>$PARAM[font_black]</filename>
-                <size>64</size>
+                <size>74</size>
                 <aspect>$PARAM[aspect_standard]</aspect>
             </font>
 
@@ -65,7 +65,7 @@
             <font>
                 <name>font_midi_black</name>
                 <filename>$PARAM[font_black]</filename>
-                <size>37</size>
+                <size>36</size>
                 <aspect>$PARAM[aspect_standard]</aspect>
             </font>
             <font>

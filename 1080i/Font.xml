@@ -7,7 +7,7 @@
 
     <fontset id="NotoRoboto - Arabic / Hebrew" unicode="true">
         <include content="Font_Default">
-            <param name="font_black">RobotoNotoCondensed-Black.ttf</param>
+            <param name="font_black">RobotoNotoCondensed-ExtraBold.ttf</param>
             <param name="font_bold">RobotoNotoCondensed-Bold.ttf</param>
             <param name="font_regular">RobotoNotoCondensed-Regular.ttf</param>
             <param name="font_light">RobotoNotoCondensed-Light.ttf</param>

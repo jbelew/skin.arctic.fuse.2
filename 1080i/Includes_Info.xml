@@ -1667,7 +1667,7 @@
 
     <include name="Info_Panel">
         <param name="container" />
-        <param name="plotheight">80</param>
+        <param name="plotheight">120</param>
         <param name="plotwidth">info_plot_w</param>
         <param name="colordiffuse">main_fg</param>
         <param name="ratings">true</param>
@@ -1718,7 +1718,6 @@
                             <param name="grouplistid">$PARAM[grouplistid]</param>
                             <centertop>37.5</centertop>
                             <visible>$PARAM[visible]</visible>
-                            <!-- <visible>$PARAM[details]</visible> -->
                         </include>
                     </control>
 

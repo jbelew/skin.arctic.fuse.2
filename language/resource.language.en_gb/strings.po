@@ -410,6 +410,11 @@ msgctxt "#31083"
 msgid "Combined"
 msgstr ""
 
+#: /1080i/Includes_Shortcuts_Window.xml
+msgctxt "#31084"
+msgid "Categories using a submenu to select widgets will not use global widgets because submenu widgets disable the widget stack."
+msgstr ""
+
 msgctxt "#31085"
 msgid "Live TV"
 msgstr ""
@@ -418,8 +423,33 @@ msgctxt "#31086"
 msgid "Customise options"
 msgstr ""
 
+#: /1080i/Includes_Shortcuts_Window.xml
+msgctxt "#31087"
+msgid "Global widgets are displayed for all categories at the end of the widget stack."
+msgstr ""
+
+#: /1080i/VideoOSDBookmarks.xml
+msgctxt "#31088"
+msgid "No bookmarks"
+msgstr ""
+
+#: /1080i/VideoOSDBookmarks.xml
+msgctxt "#31089"
+msgid "Add a bookmark here"
+msgstr ""
+
 msgctxt "#31090"
 msgid "In-Progress"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31091"
+msgid "Blur background for classic widgets"
+msgstr ""
+
+#: /1080i/Includes_Shortcuts_Window.xml
+msgctxt "#31092"
+msgid "Detailed information"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml

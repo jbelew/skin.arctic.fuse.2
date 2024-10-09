@@ -436,7 +436,30 @@
                 <param name="id">$PARAM[id]</param>
                 <param name="detailed">$PARAM[detailed]</param>
                 <param name="indicator">$PARAM[indicator]</param>
-                <param name="variation">$PARAM[variation]</param>
+                <param name="variation">false</param>
+                <param name="diffuse">$PARAM[diffuse]</param>
+                <param name="icon">$PARAM[icon]</param>
+                <param name="textcolor">$PARAM[textcolor]</param>
+                <param name="shadow_colordiffuse">$PARAM[shadow_colordiffuse]</param>
+                <param name="offset_x">$PARAM[offset_x]</param>
+                <param name="offset_y">$PARAM[offset_y]</param>
+                <param name="control">fixedlist</param>
+                <param name="hidden_button_enabled">$PARAM[hidden_button_enabled]</param>
+                <param name="hidden_button">$PARAM[hidden_button]</param>
+                <nested />
+                <include>List_Card_Row_Movement</include>
+            </include>
+        </definition>
+    </include>
+
+    <include name="List_Corflute_Row">
+        <definition>
+            <include content="_List_Card_Row">
+                <param name="misc">$PARAM[misc]</param>
+                <param name="id">$PARAM[id]</param>
+                <param name="detailed">$PARAM[detailed]</param>
+                <param name="indicator">$PARAM[indicator]</param>
+                <param name="variation">true</param>
                 <param name="diffuse">$PARAM[diffuse]</param>
                 <param name="icon">$PARAM[icon]</param>
                 <param name="textcolor">$PARAM[textcolor]</param>
@@ -780,20 +803,38 @@
     <include name="List_ButtonMenu_Row_HiddenButton_Home_Categories_OnFocus">
         <param name="condition">true</param>
         <definition>
-            <include content="Action_Widgets_ResetPosition_OnFocus">
+            <!-- <include content="Action_Widgets_ResetPosition_OnFocus">
                 <param name="condition">Container(400).HasPrevious</param>
             </include>
-            <onfocus>AlarmClock(SwitchAdaptiveWidget,RunScript(script.skinvariables,run_executebuiltin=special://skin/shortcuts/builtins/skinvariables-specialfolderpath.json,use_rules,condition=$PARAM[condition],prefix=$PARAM[prefix]),00:00,silent)</onfocus>
+
+            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetProperty(TMDbHelper.WidgetContainer.UpdateLock,$INFO[$PARAM[container]ListItem.CurrentItem],1198)</onfocus>
+            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem) + !String.IsEmpty(ListItem.Property(use_as_widget))">SetFocus(3002)</onfocus>
+            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem) + String.IsEmpty(ListItem.Property(use_as_widget))">SetFocus(400)</onfocus>
+            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetFocus(300)</onfocus> -->
+
+            <!-- <include content="Action_Widgets_ResetPosition_OnFocus">
+                <param name="condition">Container(400).HasPrevious | !String.IsEmpty(Window.Property(Widgets.ResetPosition))</param>
+            </include> -->
+            <!-- <onfocus>AlarmClock(SwitchAdaptiveWidget,RunScript(script.skinvariables,run_executebuiltin=special://skin/shortcuts/builtins/skinvariables-specialfolderpath.json,use_rules,condition=$PARAM[condition],prefix=$PARAM[prefix]),00:00,silent)</onfocus> -->
         </definition>
     </include>
 
     <include name="List_ButtonMenu_Row_HiddenButton_Home_Categories">
         <control type="button">
             <visible allowhiddenfocus="true">false</visible>
-            <animation effect="fade" start="0" end="0" time="400" reversible="false">Focus</animation>
-            <include content="List_ButtonMenu_Row_HiddenButton_Home_Categories_OnFocus">
+            <!-- <animation effect="fade" start="0" end="0" time="400" reversible="false">Focus</animation> -->
+            <animation effect="fade" start="0" end="0" time="50" reversible="false">Focus</animation>
+            <!-- <include content="List_ButtonMenu_Row_HiddenButton_Home_Categories_OnFocus">
                 <param name="prefix">$PARAM[prefix]</param>
+            </include> -->
+            <include content="Action_Widgets_ResetPosition_OnFocus">
+                <param name="condition">Container(400).HasPrevious | !String.IsEmpty(Window.Property(Widgets.ResetPosition))</param>
             </include>
+            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetProperty(TMDbHelper.WidgetContainer.UpdateLock,$INFO[$PARAM[container]ListItem.CurrentItem],1198)</onfocus>
+            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem) + !String.IsEmpty(ListItem.Property(use_as_widget))">SetFocus(3002)</onfocus>
+            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem) + String.IsEmpty(ListItem.Property(use_as_widget)) + ![Container(400).HasPrevious | !String.IsEmpty(Window.Property(Widgets.ResetPosition))]">SetFocus(400)</onfocus>
+            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem) + String.IsEmpty(ListItem.Property(use_as_widget)) + [Container(400).HasPrevious | !String.IsEmpty(Window.Property(Widgets.ResetPosition))]">SetFocus($INFO[$PARAM[container]ListItem.Property(item)]601)</onfocus>
+            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetFocus(300)</onfocus>
         </control>
     </include>
 

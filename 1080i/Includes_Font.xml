@@ -44,7 +44,7 @@
             <font>
                 <name>font_title_main</name>
                 <filename>$PARAM[font_black]</filename>
-                <size>74</size>
+                <size>64</size>
                 <aspect>$PARAM[aspect_standard]</aspect>
             </font>
 

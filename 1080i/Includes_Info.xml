@@ -1671,6 +1671,7 @@
         <param name="container" />
         <param name="plotheight">120</param>
         <param name="plotwidth">info_plot_w</param>
+        <param name="titlewidth">info_panel_w</param>
         <param name="colordiffuse">main_fg</param>
         <param name="ratings">true</param>
         <param name="details">true</param>
@@ -1704,7 +1705,8 @@
                     <include content="Info_Title" condition="$PARAM[title]">
                         <param name="label">$PARAM[titlelabel]</param>
                         <param name="colordiffuse">$PARAM[colordiffuse]</param>
-                        <param name="width">$PARAM[plotwidth]</param>
+                        <!-- <param name="width">$PARAM[plotwidth]</param> -->
+                        <param name="width">$PARAM[titlewidth]</param>
                         <param name="mainlogo_visible">$PARAM[mainlogo_visible]</param>
                         <param name="mainlogo_texture">$PARAM[mainlogo_texture]</param>
                     </include>

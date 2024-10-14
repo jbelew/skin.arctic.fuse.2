@@ -1724,7 +1724,8 @@
                             <param name="container">$PARAM[container]</param>
                             <param name="starrating">$PARAM[starrating]</param>
                             <param name="grouplistid">$PARAM[grouplistid]</param>
-                            <centertop>37.5</centertop>
+                            <!-- <centertop>37.5</centertop> -->
+                            <centertop>42</centertop>
                             <visible>$PARAM[visible]</visible>
                         </include>
                     </control>

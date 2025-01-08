@@ -128,7 +128,7 @@
     </include>
 
     <include name="Font_Default">
-        <param name="font_bold">RobotoCondensed-Bold.ttf</param>
+        <param name="font_bold">RobotoCondensed-ExtraBold.ttf</param>
         <param name="font_regular">RobotoCondensed-Regular.ttf</param>
         <param name="font_light">RobotoCondensed-Light.ttf</param>
 
@@ -150,8 +150,8 @@
         <!-- Main -->
         <param name="size_heavy_main">30</param>
         <param name="size_light_main">30</param>
-        <param name="size_heavy_main_x2">60</param>
-        <param name="size_light_main_x2">60</param>
+        <param name="size_heavy_main_x2">76</param>
+        <param name="size_light_main_x2">76</param>
 
         <!-- Midi -->
         <param name="size_heavy_midi">34</param>
@@ -166,8 +166,8 @@
         <!-- Huge -->
         <param name="size_heavy_huge">45</param>
         <param name="size_light_huge">45</param>
-        <param name="size_heavy_huge_x2">90</param>
-        <param name="size_light_huge_x2">90</param>
+        <param name="size_heavy_huge_x2">98</param>
+        <param name="size_light_huge_x2">98</param>
 
         <!-- Linespacing -->
         <param name="plot_linespacing_head">1.146</param>

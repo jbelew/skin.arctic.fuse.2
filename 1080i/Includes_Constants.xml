@@ -159,12 +159,12 @@
     <constant name="-view_button_offset_x">-40</constant>
 
     <!-- View Info -->
-    <constant name="info_plot_w">720</constant>
+    <constant name="info_plot_w">900</constant>
     <constant name="info_panel_w">1120</constant>
-    <constant name="info_title_w">640</constant>
+    <constant name="info_title_w">1120</constant>
     <constant name="info_title_h">140</constant>
     <constant name="info_title_logo_h">155</constant>
-    <constant name="info_title_text_buffer_h">-5</constant>
+    <constant name="info_title_text_buffer_h">-24</constant>
     <constant name="info_tag_offset_y">-3</constant>  <!-- -5 -->
 
     <!-- Widgets -->

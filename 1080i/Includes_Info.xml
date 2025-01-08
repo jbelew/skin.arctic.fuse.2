@@ -16,7 +16,8 @@
                 <textcolor>$PARAM[colordiffuse]_100</textcolor>
                 <font>font_title_main</font>
                 <aligny>top</aligny>
-                <height max="160">auto</height>
+                <!-- <height max="160">auto</height> -->
+                <height>100</height>
                 <visible>$PARAM[visible]</visible>
                 <width>$PARAM[width]</width>
                 <autoscroll>false</autoscroll>
@@ -1802,7 +1803,7 @@
                     <param name="condition">![$PARAM[visible]]</param>
                 </include>
                 <control type="grouplist">
-                    <top>-20</top>
+                    <top>40</top>
                     <left>-40</left>
                     <hitrect x="0" y="0" w="0" h="0" />
                     <orientation>vertical</orientation>

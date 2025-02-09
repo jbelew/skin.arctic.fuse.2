@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="Label_SkinSettings_Level">
+        <value condition="Integer.IsEqual(Window(Home).Property(Skin.SettingsLevel),3)">$LOCALIZE[10039]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(Skin.SettingsLevel),2)">$LOCALIZE[10038]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(Skin.SettingsLevel),1)">$LOCALIZE[10037]</value>
+        <value>$LOCALIZE[10036]</value>
+    </variable>
+
     <variable name="Label_UpdateLibrary">
         <value condition="library.isscanningmusic | library.isscanningvideo">$LOCALIZE[31485]</value>
         <value>$LOCALIZE[24138]</value>
@@ -458,13 +465,14 @@
     </variable>
 
     <variable name="Label_Setting_HubsMenuStyle">
-        <value condition="Skin.HasSetting(Hubs.DisableTextCategories)">$LOCALIZE[31274]</value>
+        <value condition="!Skin.String(Hubs.MenuStyle,Text)">$LOCALIZE[31274]</value>
         <value>$LOCALIZE[31329]</value>
     </variable>
 
     <variable name="Label_Setting_OptionalInfoLine">
-        <value condition="Skin.HasSetting(InfoLine.EndTime)">$LOCALIZE[31192]</value>
-        <value>$LOCALIZE[515]</value>
+        <value condition="Skin.String(InfoLine.Optional,Ends)">$LOCALIZE[31192]</value>
+        <value condition="Skin.String(InfoLine.Optional,Genre)">$LOCALIZE[515]</value>
+        <value>$LOCALIZE[231]</value>
     </variable>
 
     <variable name="Label_Setting_AdditionalTags">       
@@ -805,8 +813,9 @@
     </variable>
 
     <variable name="Label_Studio">
-        <value condition="!String.IsEmpty(ListItem.Studio)">$INFO[ListItem.Studio]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_studio))">$INFO[Window(Home).Property(TMDbHelper.ListItem.base_studio)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.1.Name))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.1.Name)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.1.Name))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.1.Name)]</value>
     </variable>
     <variable name="Label_FromStudio">
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.1.Name))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.1.Name)]</value>

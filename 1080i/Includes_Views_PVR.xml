@@ -347,6 +347,7 @@
                 </control>
             </control>
         </control>
+        <include>Furniture_Top_Right</include>
         <include>Furniture_Bottom_Right</include>
     </include>
 

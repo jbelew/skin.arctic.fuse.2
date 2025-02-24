@@ -130,6 +130,7 @@
                 </include>
             </control>
 
+            <include>Furniture_Top_Right</include>
             <include>Furniture_Bottom_Right</include>
         </control>
     </include>

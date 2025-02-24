@@ -369,9 +369,7 @@
             <control type="group">
 
                 <visible>!Window.IsVisible(DialogSettings.xml)</visible>
-                <include content="Animation_SlideIn_Dialog">
-                    <param name="posy">48</param>
-                </include>
+                <include>Animation_SlideIn_Dialog</include>
 
                 <animation effect="fade" start="100" end="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,0)">Conditional</animation>
                 <right>-40</right>
@@ -577,8 +575,7 @@
         <left>view_pad</left>
         <width>info_panel_w</width>
         <top>-40</top>
-        <bottom>227.5</bottom>
-        <!-- <bottom>307.5</bottom> -->
+        <bottom>220</bottom>
         <orientation>vertical</orientation>
 
         <control type="group" description="Avoid grouplist chop with spacer">
@@ -587,11 +584,9 @@
     </include>
 
     <include name="OSD_Progress_Details_Extended">
-        <param name="align">bottom</param>
         <definition>
             <control type="grouplist">
                 <bottom>44</bottom>
-                <align>$PARAM[align]</align>
                 <include>OSD_Progress_Details_Grouplist_Def</include>
                 <control type="group">
                     <height>view_landscape_item_h</height>
@@ -645,6 +640,19 @@
                     <visible>!VideoPlayer.Content(livetv)</visible>
                     <height>18</height>
                 </control>
+
+                <control type="group" description="Avoid grouplist chop with spacer">
+                    <height>20</height>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="OSD_Progress_Details_Simple">
+        <definition>
+            <control type="grouplist">
+                <include>OSD_Progress_Details_Grouplist_Def</include>
+                <include>OSD_Progress_Details_TitleInfoLine</include>
 
                 <control type="group" description="Avoid grouplist chop with spacer">
                     <height>20</height>

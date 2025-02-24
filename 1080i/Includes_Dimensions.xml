@@ -151,7 +151,7 @@
         <height>80</height>
         <width>820</width>
         <right>60</right>
-        <centerbottom>100</centerbottom>
+        <centertop>100</centertop>
     </include>
 
     <include name="Dimension_Info_Line_Pillbox">
